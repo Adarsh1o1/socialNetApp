@@ -51,7 +51,7 @@ docker-compose up
 This command will start the application on http://127.0.0.1:8000.
 
 ### Step 3 Access Api end points
-- Signup:
+- **Signup**:
 POST method
 http://127.0.0.1:8000/api/myapp/signup/
 Request body
@@ -63,7 +63,7 @@ Request body
   "password2":"Adarsh@123"
 }
 ```
-- Login:
+-  **Login**:
 POST method
 http://127.0.0.1:8000/api/myapp/login/
 Request body:
@@ -80,7 +80,7 @@ Search firends by username or email:
 GET method
 http://127.0.0.1:8000/api/myapp/users/?search=kashish
 
-- Send firend requests:
+- **Send firend requests**:
 POST method
 ```bash
 http://127.0.0.1:8000/api/myapp/friend-requests/
@@ -91,7 +91,7 @@ Request body:
 ```
 you will get a firend request id, status etc in response for future use
 
-- Accept Request:
+- **Accept Request**:
 POST method
 http://127.0.0.1:8000/api/myapp/friend-requests/id/accept/
 NOTE: Put id in above url which you get form send firend request api like replace with id with 2 or 3(whatever id u recieved in response form send firend request api)
@@ -103,7 +103,7 @@ Request body:
 }
 ```
 
-- Reject Request:
+- **Reject Request**:
 POST method
 http://127.0.0.1:8000/api/myapp/friend-requests/id/reject/
 NOTE: Put id in above url which you get form send firend request api like replace with id with 2 or 3(whatever id u recieved in response form send firend request api)
@@ -114,11 +114,11 @@ Request body:
 }
 ```
 
-To see list of pending requests:
+- **To see list of pending requests**:
 GET method
 http://127.0.0.1:8000/api/myapp/friend-requests/list_pending_requests
 
-To see list of friends:
+- **To see list of friends**s:
 GET method
 http://127.0.0.1:8000/api/myapp/friend-requests/list_friends
 
