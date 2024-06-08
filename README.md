@@ -51,6 +51,7 @@ docker-compose up
 This command will start the application on http://127.0.0.1:8000.
 
 ### Step 3 Access Api end points
+### Postman collection is added in main branch of this repo
 - **Signup**:
 POST method
 http://127.0.0.1:8000/api/myapp/signup/
