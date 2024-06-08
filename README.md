@@ -1,4 +1,3 @@
-# socialNetApp
 # Social Networking Application
 
 This is a simple social networking application built with Django and Django REST Framework (DRF). The application supports user authentication, friend requests, and basic CRUD operations on user profiles. It uses SQLite for the database and Docker for containerization.
@@ -41,7 +40,6 @@ Before you begin, ensure you have the following installed:
 
 ### Step 1: Clone the Repository
 
-```bash
 git clone https://github.com/yourusername/social-networking-app.git
 cd social-networking-app
 
