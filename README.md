@@ -55,6 +55,7 @@ Signup:
 POST method
 http://127.0.0.1:8000/api/myapp/signup/
 Request body
+```bash
 {
   "email":"lucasadarsh@gmail.com",
   "username":"lucas",
