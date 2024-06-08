@@ -107,6 +107,8 @@ class FriendRequests(viewsets.ViewSet):
     def list_pending_requests(self, request):
         pending_requests = FriendRequest.objects.filter(to_user=request.user, status='pending')
         serializer = FriendRequestSerializer(pending_requests, many=True)
+        if not pending_requests.exists():
+            return Response({'message': 'Nothing to see here'}, status=status.HTTP_200_OK)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=['get'])
@@ -115,5 +117,9 @@ class FriendRequests(viewsets.ViewSet):
             Q(sent_requests__to_user=request.user, sent_requests__status='accepted') | 
             Q(received_requests__from_user=request.user, received_requests__status='accepted')
         ).distinct()
+        if not friends.exists():
+            return Response({'message': 'Nothing to see here'}, status=status.HTTP_200_OK)
+
         data= [{'id': friend.id, 'username': friend.username, 'email': friend.email} for friend in friends]
         return Response(data, status=status.HTTP_200_OK)
+        
