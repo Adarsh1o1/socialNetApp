@@ -62,7 +62,7 @@ Request body
   "password":"Adarsh@123",
   "password2":"Adarsh@123"
 }
-```bash
+```
 Login:
 POST method
 http://127.0.0.1:8000/api/myapp/login/
