@@ -71,7 +71,8 @@ Request body:
 {
   "email":"lucasadarsh@gmail.com",
   "password":"Adarsh@123"
-}```
+}
+```
 Get the access token from response and must to use this token to access other api endpoint except login and signup
 **Make sure to pass bearer token in headers**
 
@@ -86,7 +87,8 @@ http://127.0.0.1:8000/api/myapp/friend-requests/
 Request body:
 {
   "to_user": 2
-}```
+}
+```
 you will get a firend request id, status etc in response for future use
 
 Accept Request:
@@ -97,6 +99,7 @@ Request body:
 ```bash
 {
     "action": "accept"
+
 }```
 
 Reject Request:
@@ -107,7 +110,8 @@ Request body:
 ```bash
 {
     "action": "reject"
-}```
+}
+```
 
 To see list of pending requests:
 GET method
