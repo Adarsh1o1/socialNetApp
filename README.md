@@ -67,10 +67,11 @@ Login:
 POST method
 http://127.0.0.1:8000/api/myapp/login/
 Request body:
+```bash
 {
   "email":"lucasadarsh@gmail.com",
   "password":"Adarsh@123"
-}
+}```
 Get the access token from response and must to use this token to access other api endpoint except login and signup
 **Make sure to pass bearer token in headers**
 
@@ -80,11 +81,12 @@ http://127.0.0.1:8000/api/myapp/users/?search=kashish
 
 Send firend requests:
 POST method
+```bash
 http://127.0.0.1:8000/api/myapp/friend-requests/
 Request body:
 {
   "to_user": 2
-}
+}```
 you will get a firend request id, status etc in response for future use
 
 Accept Request:
@@ -92,18 +94,20 @@ POST method
 http://127.0.0.1:8000/api/myapp/friend-requests/id/accept/
 NOTE: Put id in above url which you get form send firend request api like replace with id with 2 or 3(whatever id u recieved in response form send firend request api)
 Request body:
+```bash
 {
     "action": "accept"
-}
+}```
 
 Reject Request:
 POST method
 http://127.0.0.1:8000/api/myapp/friend-requests/id/reject/
 NOTE: Put id in above url which you get form send firend request api like replace with id with 2 or 3(whatever id u recieved in response form send firend request api)
 Request body:
+```bash
 {
     "action": "reject"
-}
+}```
 
 To see list of pending requests:
 GET method
@@ -113,6 +117,6 @@ To see list of friends:
 GET method
 http://127.0.0.1:8000/api/myapp/friend-requests/list_friends
 
-NOTE: Make sure to provide Bearer token in headers to access Api endpoints except login and signup
+### NOTE: Make sure to provide Bearer token in headers to access Api endpoints except login and signup
 
 
